@@ -11,7 +11,7 @@ def main():
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
     chara=pg.image.load("fig/3.png")
-    chara=pg.transform.flip(chara,True,False)
+    rchara=pg.transform.flip(chara,True,False)
     tmr = 0
     while True:
         for event in pg.event.get():
