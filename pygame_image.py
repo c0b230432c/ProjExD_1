@@ -28,14 +28,16 @@ def main():
         screen.blit(fbg_img,[bg_start+4800,0])
         key_lst=pg.key.get_pressed()
         if key_lst[pg.K_UP]:
-            kokaton_rct.move_ip((0,-1))
+            x,y=0,-1
         elif key_lst[pg.K_DOWN]:
-            kokaton_rct.move_ip((0,1))
+            x,y=0,1
         elif key_lst[pg.K_LEFT]:
-            kokaton_rct.move_ip((-1,0))
+            x,y=-1,0
         elif key_lst[pg.K_RIGHT]:
-            kokaton_rct.move_ip((2,0))
-        kokaton_rct.move_ip((-1,0))
+            x,y=2,0
+        else:
+            x,y=0,0
+        kokaton_rct.move_ip((-1+x,0+y))
         screen.blit(kokaton,kokaton_rct)    
         pg.display.update()
         tmr += 1        
