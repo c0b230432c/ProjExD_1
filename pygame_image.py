@@ -34,7 +34,8 @@ def main():
         elif key_lst[pg.K_LEFT]:
             kokaton_rct.move_ip((-1,0))
         elif key_lst[pg.K_RIGHT]:
-            kokaton_rct.move_ip((1,0))
+            kokaton_rct.move_ip((2,0))
+        kokaton_rct.move_ip((-1,0))
         screen.blit(kokaton,kokaton_rct)    
         pg.display.update()
         tmr += 1        
